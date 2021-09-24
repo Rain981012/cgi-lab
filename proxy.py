@@ -55,7 +55,7 @@ try:
                 skip = False
                 try:
                     part = client_socket.recv(1024)
-                except socket.error, exception:
+                except socket.error as exception:
                     if exception.errno == errno.EAGAIN:
                         skip = True
                     else:
@@ -78,7 +78,7 @@ try:
                 skip = False
                 try:
                     part = remote_socket.recv(1024)
-                except socket.error, exception:
+                except socket.error as exception:
                     if exception.errno == errno.EAGAIN:
                         skip = True
                     else:
